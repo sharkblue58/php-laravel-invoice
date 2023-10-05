@@ -80,7 +80,7 @@ To contribute to this project, please follow these steps:
 5. Push your branch to your fork.
 6. Open a pull request against the upstream repository.
 
-<div class="note">
+<div style="background-color: #e7f3fe;border-left: 6px solid #2196F3;">
   <p><strong>NOTE !</strong> Please make sure to follow the coding style guide and testing guidelines when making your contributions.</p>
 </div>
 
@@ -96,10 +96,3 @@ This project is licensed under the **MIT** License.
 
 This project was created by **Mohamed Essam** .
 
-
-<style>
-.note {
-  background-color: #e7f3fe;
-  border-left: 6px solid #2196F3;
-}
-</style>
