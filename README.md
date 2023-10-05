@@ -80,9 +80,7 @@ To contribute to this project, please follow these steps:
 5. Push your branch to your fork.
 6. Open a pull request against the upstream repository.
 
-<div style="background-color: #e7f3fe;border-left: 6px solid #2196F3;">
-  <p><strong>NOTE !</strong> Please make sure to follow the coding style guide and testing guidelines when making your contributions.</p>
-</div>
+> **&#9432;**  Please make sure to follow the coding style guide and testing guidelines when making your contributions.
 
 ## Deployment:
 
