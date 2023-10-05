@@ -63,6 +63,12 @@ The project can be accessed at ```http://127.0.0.1:8000``` in your browser.
 - Send invoices via email
 - View invoice history
 
+## Gallery
+
+<div>
+<img src="https://github.com/sharkblue58/php-laravel-invoice/blob/main/public/assets/invovice1.png" width="300">
+</div>
+
 ## Deployment:
 
 To deploy the project to production, you can use a variety of methods, such as Laravel Forge, Capistrano, or Deployer.
