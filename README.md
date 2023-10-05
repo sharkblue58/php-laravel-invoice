@@ -73,14 +73,14 @@ The project can be accessed at ```http://127.0.0.1:8000``` in your browser.
 
 To contribute to this project, please follow these steps:
 
-1-Fork the repository.
-2-Create a new branch for your contribution.
-3-Make your changes.
-4-Commit your changes with a descriptive message.
-5-Push your branch to your fork.
-6-Open a pull request against the upstream repository.
+1. Fork the repository.
+2. Create a new branch for your contribution.
+3. Make your changes.
+4. Commit your changes with a descriptive message.
+5. Push your branch to your fork.
+6. Open a pull request against the upstream repository.
 
- **_NOTE:_** Please make sure to follow the coding style guide and testing guidelines when making your contributions.
+[!NOTE]  Please make sure to follow the coding style guide and testing guidelines when making your contributions.
 
 ## Deployment:
 
