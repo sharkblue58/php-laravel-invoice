@@ -66,7 +66,7 @@ The project can be accessed at ```http://127.0.0.1:8000``` in your browser.
 ## Gallery
 
 <div>
-<img src="https://github.com/sharkblue58/php-laravel-invoice/blob/main/public/assets/invovice1.png" width="300">
+<img src="https://github.com/sharkblue58/php-laravel-invoice/blob/main/public/assets/gallery/invovice1.png" width="200">
 </div>
 
 ## Deployment:
