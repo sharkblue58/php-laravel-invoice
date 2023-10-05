@@ -80,7 +80,7 @@ To contribute to this project, please follow these steps:
 5. Push your branch to your fork.
 6. Open a pull request against the upstream repository.
 
-[!NOTE]  
+**Note**  
 Please make sure to follow the coding style guide and testing guidelines when making your contributions.
 
 ## Deployment:
