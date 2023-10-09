@@ -440,7 +440,7 @@
 		<!-- Container closed -->
 @endsection
 @section('title')
-الرئيسية
+لوحة التحكم
 @endsection
 @section('js')
 <!--Internal  Chart.bundle js -->
