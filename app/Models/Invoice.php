@@ -14,6 +14,7 @@ class Invoice extends Model
         'invoice_date',
         'due_date',
         'product',
+        'section_id',
         'amount_collection',
         'amount_commission',
         'discount',
@@ -27,4 +28,8 @@ class Invoice extends Model
         'deleted_at',
         'created_at'
     ];
+
+    public function section(){
+        return $this->belongsTo(Section::class);
+    }
 }

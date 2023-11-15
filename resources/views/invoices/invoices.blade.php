@@ -24,51 +24,72 @@
     <!-- row -->
     <div class="row">
         <!--div-->
-		<div class="col-xl-12">
-			<div class="card">
-				<div class="card-header pb-0">
-					<div class="d-flex justify-content-between">
-						<h4 class="card-title mg-b-0">SIMPLE TABLE</h4>
-						<i class="mdi mdi-dots-horizontal text-gray"></i>
-					</div>
-					<p class="tx-12 tx-gray-500 mb-2">Example of Valex Simple Table. <a href="">Learn more</a></p>
-				</div>
-				<div class="card-body">
-					<div class="table-responsive">
-						<table class="table text-md-nowrap" id="example1">
-							<thead>
-								<tr>
-									<th class="wd-15p border-bottom-0">#</th>
-									<th class="wd-15p border-bottom-0">رقم الفاتورة</th>
-									<th class="wd-20p border-bottom-0">تاريخ الفاتورة</th>
-									<th class="wd-15p border-bottom-0">تاريخ الاستحقاق</th>
-									<th class="wd-10p border-bottom-0">الخصم</th>
-									<th class="wd-15p border-bottom-0">نسبة الضريبة</th>
-									<th class="wd-10p border-bottom-0">قيمة الضريبة</th>
-									<th class="wd-10p border-bottom-0">الاجمالي</th>
-									<th class="wd-10p border-bottom-0">الحالة</th>
-									<th class="wd-10p border-bottom-0">ملاحظات</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Bella</td>
-									<td>Chloe</td>
-									<td>System Developer</td>
-									<td>2018/03/12</td>
-									<td>$654,765</td>
-									<td>b.err@nm.net</td>
-									<td>System Developer</td>
-									<td>2018/03/12</td>
-									<td>$654,765</td>
-									<td>$654,765</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header pb-0">
+                    <div class="d-flex justify-content-between">
+                        <a href="invoices/create" class="modal-effect btn btn-sm btn-success" style="color:white"><i
+                                class="fas fa-plus"></i>&nbsp; اضافة فاتورة</a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table text-md-nowrap" id="example1">
+                            <thead>
+                                <tr>
+                                    <th class="wd-15p border-bottom-0">#</th>
+                                    <th class="wd-15p border-bottom-0">رقم الفاتورة</th>
+                                    <th class="wd-20p border-bottom-0">تاريخ الفاتورة</th>
+                                    <th class="wd-15p border-bottom-0">تاريخ الاستحقاق</th>
+                                    <th class="wd-15p border-bottom-0">المنتج</th>
+                                    <th class="wd-15p border-bottom-0">القسم</th>
+                                    <th class="wd-10p border-bottom-0">الخصم</th>
+                                    <th class="wd-15p border-bottom-0">نسبة الضريبة</th>
+                                    <th class="wd-10p border-bottom-0">قيمة الضريبة</th>
+                                    <th class="wd-10p border-bottom-0">الاجمالي</th>
+                                    <th class="wd-10p border-bottom-0">الحالة</th>
+                                    <th class="wd-10p border-bottom-0">ملاحظات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @php
+                                    $i = 0;
+                                @endphp
+                                @foreach ($allInvoices as $invoice)
+                                    @php
+                                        $i++;
+                                    @endphp
+                                    <tr>
+                                        <td>{{ $i }}</td>
+                                        <td>{{ $invoice->invoice_number }}</td>
+                                        <td>{{ $invoice->invoice_date }}</td>
+                                        <td>{{ $invoice->due_date }}</td>
+                                        <td>{{ $invoice->product }}</td>
+                                        <td><a
+                                                href="{{ url('InvoicesDetails') }}/{{ $invoice->id }}">{{ $invoice->section->section_name }}</a>
+                                        </td>
+                                        <td>{{ $invoice->discount }}</td>
+                                        <td>{{ $invoice->rate_vat }}</td>
+                                        <td>{{ $invoice->value_vat }}</td>
+                                        <td>{{ $invoice->total }}</td>
+                                        <td>
+                                            @if ($invoice->value_status == 1)
+                                                <span class="text-success">{{ $invoice->status }}</span>
+                                            @elseif($invoice->value_status == 2)
+                                                <span class="text-danger">{{ $invoice->status }}</span>
+                                            @else
+                                                <span class="text-warning">{{ $invoice->status }}</span>
+                                            @endif
+                                        </td>
+                                        <td>{{ $invoice->note }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--/div-->
     </div>
 
@@ -79,7 +100,7 @@
     <!-- main-content closed -->
 @endsection
 @section('title')
-قائمة الفواتير
+    قائمة الفواتير
 @endsection
 @section('js')
     <!-- Internal Data tables -->

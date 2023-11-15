@@ -82,4 +82,6 @@ class ProductController extends Controller
         session()->flash('delete', 'تم حذف المنتج بنجاج');
         return redirect('/products');
     }
+
+    
 }
